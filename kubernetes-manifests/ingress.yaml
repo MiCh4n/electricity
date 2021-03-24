@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app-ingress
+  labels:
+      name: app-ingress
+spec:
+  rules:
+    - http:
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+            serviceName: app-svc
+            servicePort: 7777
