@@ -7,6 +7,9 @@ spec:
     matchLabels:
       app: sample-app
   template:
+    metadata:
+      labels:
+        app: sample-app
     spec:
       containers:
       - name: sample-app
