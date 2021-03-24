@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-app
+spec:
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    spec:
+      containers:
+      - name: sample-app
+        image: mich4n/electricity
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "2500m"
+        ports:
+        - containerPort: 7777
