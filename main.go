@@ -7,7 +7,7 @@ import (
 )
 
 func electricity(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "There is electricity on AWS EC2")
+	fmt.Fprintf(w, "There is electricity on AWS EC2!!!")
 }
 
 func handleRequests() {
